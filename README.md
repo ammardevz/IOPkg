@@ -17,43 +17,59 @@ python packager.py --help
 
 <h3>Creating a Package</h3>
 
-<p>To create a package, use the <code>create</code> command. Provide a name for the package and specify the files and directories to include.</p>
+<p>To create a package, use the following command:</p>
 
-<pre><code>python packager.py create &lt;package_name&gt; --include &lt;file_or_directory_path&gt;
-</code></pre>
+<pre><code>iopkg create &lt;name&gt; --include &lt;file_or_directory_path&gt;</code></pre>
+
+<p>Arguments:</p>
+<ul>
+  <li><code>&lt;name&gt;</code>: The name of the package. The package will be saved as &lt;name&gt;.iopkg.</li>
+</ul>
+
+<p>Options:</p>
+<ul>
+  <li><code>--include, -i</code>: List of files and directories to include in the package.</li>
+</ul>
 
 <p>Example:</p>
 
-<pre><code>python packager.py create my_package --include src/
-</code></pre>
+<pre><code>iopkg create my_package --include src/</code></pre>
 
 <p>This will create a package named <code>my_package.iopkg</code> that includes all the files and directories within the <code>src/</code> directory.</p>
 
 <h3>Extracting Package Information</h3>
 
-<p>To extract information from a package, use the <code>info</code> command. Provide the name of the package file.</p>
+<p>To extract information from a package, use the following command:</p>
 
-<pre><code>python packager.py info &lt;package_name&gt;
-</code></pre>
+<pre><code>iopkg info &lt;name&gt;</code></pre>
 
-<p>Example:</p>
+<p>Arguments:</p>
+<ul>
+  <li><code>&lt;name&gt;</code>: The name of the package to extract information from.</li>
+</ul>
 
-<pre><code>python packager.py info my_package.iopkg
-</code></pre>
-
-<p>This will display information about the package, including the author, creation date, version, and the list of files included in the package.</p>
+<p>This command will display information about the package, including the author, creation date, version, and the list of files included in the package.</p>
 
 <h3>Unpacking a Package</h3>
 
-<p>To unpack a package and extract its contents, use the <code>unpack</code> command. Provide the name of the package file and specify the target directory where the contents should be extracted.</p>
+<p>To unpack a package and extract its contents, use the following command:</p>
 
-<pre><code>python packager.py unpack &lt;package_name&gt; --target &lt;target_directory&gt;
-</code></pre>
+<pre><code>iopkg unpack &lt;name&gt; --target &lt;target_directory&gt;</code></pre>
+
+<p>Arguments:</p>
+<ul>
+  <li><code>&lt;name&gt;</code>: The name of the package to unpack.</li>
+</ul>
+
+<p>Options:</p>
+<ul>
+  <li><code>--target, -t</code>: The destination directory where the contents should be extracted. (Default: Current directory)</li>
+  <li><code>--force, -f</code>: Create the target directory if it does not exist.</li>
+</ul>
 
 <p>Example:</p>
 
-<pre><code>python packager.py unpack my_package.iopkg --target ./output/
-</code></pre>
+<pre><code>iopkg unpack my_package.iopkg --target ./output/</code></pre>
 
 <p>This will extract the contents of the package <code>my_package.iopkg</code> to the <code>output/</code> directory.</p>
 
