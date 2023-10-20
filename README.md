@@ -10,7 +10,7 @@
 
 <pre><code>git clone https://github.com/ammardevz/IOPkg.git
 cd IOPkg
-python packager.py --help
+python iopkg.py --help
 </code></pre>
 
 <h2>Usage</h2>
@@ -19,7 +19,7 @@ python packager.py --help
 
 <p>To create a package, use the following command:</p>
 
-<pre><code>iopkg create &lt;name&gt; --include &lt;file_or_directory_path&gt;</code></pre>
+<pre><code>python iopkg.py create &lt;name&gt; --include &lt;file_or_directory_path&gt;</code></pre>
 
 <p>Arguments:</p>
 <ul>
@@ -33,7 +33,7 @@ python packager.py --help
 
 <p>Example:</p>
 
-<pre><code>iopkg create my_package --include src/</code></pre>
+<pre><code>python iopkg.py create my_package --include src/</code></pre>
 
 <p>This will create a package named <code>my_package.iopkg</code> that includes all the files and directories within the <code>src/</code> directory.</p>
 
@@ -41,7 +41,7 @@ python packager.py --help
 
 <p>To extract information from a package, use the following command:</p>
 
-<pre><code>iopkg info &lt;name&gt;</code></pre>
+<pre><code>python iopkg.py info &lt;name&gt;</code></pre>
 
 <p>Arguments:</p>
 <ul>
@@ -54,7 +54,7 @@ python packager.py --help
 
 <p>To unpack a package and extract its contents, use the following command:</p>
 
-<pre><code>iopkg unpack &lt;name&gt; --target &lt;target_directory&gt;</code></pre>
+<pre><code>python iopkg.py unpack &lt;name&gt; --target &lt;target_directory&gt;</code></pre>
 
 <p>Arguments:</p>
 <ul>
@@ -69,7 +69,7 @@ python packager.py --help
 
 <p>Example:</p>
 
-<pre><code>iopkg unpack my_package.iopkg --target ./output/</code></pre>
+<pre><code>python iopkg.py unpack my_package.iopkg --target ./output/</code></pre>
 
 <p>This will extract the contents of the package <code>my_package.iopkg</code> to the <code>output/</code> directory.</p>
 
