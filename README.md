@@ -1,4 +1,4 @@
-<h1>IOPkg - Open Source Platform-Independent Package Manager</h1>
+<h1>IOPkg - Open Source Platform-Independent local Package Manager</h1>
 
 <p>Welcome to IOPkg, an open-source package manager designed to create and manage platform-independent packages. IOPkg provides a powerful command-line interface (CLI) for package creation, extraction, and inspection.</p>
 
