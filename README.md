@@ -73,6 +73,16 @@ python iopkg.py --help
 
 <p>This will extract the contents of the package <code>my_package.iopkg</code> to the <code>output/</code> directory.</p>
 
+<h2>Windows Usage with Python</h2>
+
+<p>On Windows, you can use the following commands to interact with IOPkg:</p>
+
+<pre><code>py iopkg.py create &lt;name&gt; --include &lt;file_or_directory_path&gt;</code></pre>
+<pre><code>py iopkg.py info &lt;name&gt;</code></pre>
+<pre><code>py iopkg.py unpack &lt;name&gt; --target &lt;target_directory&gt;</code></pre>
+
+<p>Make sure you have Python installed and added to your system's PATH environment variable. The 'py' command is used to invoke the Python interpreter.</p>
+
 <h2>Contributing</h2>
 
 <p>Contributions to IOPkg are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request on the <a href="https://github.com/ammardevz/IOPkg">GitHub repository</a>.</p>
