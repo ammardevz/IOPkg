@@ -10,11 +10,19 @@
 
 <h2>Usage</h2>
 
+<p>IOPkg provides the following commands:</p>
+
+<p><code>iopkg create &lt;name&gt; [--include &lt;file_or_directory_path&gt; ...]</code> - Creates a package with the specified name and includes the specified files and directories. Multiple <code>--include</code> options can be used to include multiple files or directories.</p>
+
+<p><code>iopkg info &lt;name&gt;</code> - Displays detailed information about the specified package.</p>
+
+<p><code>iopkg unpack &lt;name&gt; [--target &lt;directory&gt;] [--force]</code> - Unpacks the specified package to the target directory. The <code>--target</code> option specifies the destination directory (default is the current directory), and the <code>--force</code> option allows the creation of the target directory if it does not exist.</p>
+
 <h3>Creating a Package</h3>
 
-<p>To create a package, execute the following command:</p>
+<p>To create a package, use the following command:</p>
 
-<pre><code>iopkg create &lt;name&gt; --include &lt;file_or_directory_path&gt;</code></pre>
+<pre><code>iopkg create &lt;name&gt; [--include &lt;file_or_directory_path&gt; ...]</code></pre>
 
 <p>Arguments:</p>
 <ul>
@@ -23,14 +31,8 @@
 
 <p>Options:</p>
 <ul>
-  <li><code>--include, -i</code>: Specifies the list of files and directories to include in the package.</li>
+  <li><code>--include, -i</code>: Specifies the list of files and directories to include in the package. Multiple <code>--include</code> options can be used to include multiple files or directories.</li>
 </ul>
-
-<p>Example:</p>
-
-<pre><code>iopkg create my_package --include src/</code></pre>
-
-<p>This command creates a package named <code>my_package.iopkg</code> that includes all files and directories within the <code>src/</code> directory.</p>
 
 <h3>Extracting Package Information</h3>
 
@@ -49,18 +51,18 @@
 
 <p>To unpack a package and extract its contents, use the following command:</p>
 
-<pre><code>iopkg unpack &lt;name&gt;</code></pre>
+<pre><code>iopkg unpack &lt;name&gt; [--target &lt;directory&gt;] [--force]</code></pre>
 
 <p>Arguments:</p>
 <ul>
   <li><code>&lt;name&gt;</code>: Specifies the name of the package to unpack.</li>
 </ul>
 
-<p>Example:</p>
-
-<pre><code>iopkg unpack testpkg.iopkg</code></pre>
-
-<p>This command extracts the contents of the package <code>testpkg.iopkg</code> to the current directory.</p>
+<p>Options:</p>
+<ul>
+  <li><code>--target, -t</code>: Specifies the destination directory to unpack the package (default is the current directory).</li>
+  <li><code>--force, -f</code>: Creates the target directory if it does not exist.</li>
+</ul>
 
 <h2>Contributing</h2>
 
